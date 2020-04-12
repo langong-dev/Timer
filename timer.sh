@@ -1,14 +1,17 @@
 #!/bin/bash
 clear
-if [ "$1" == "" ]
+echo " >> Timer >> Pleese input time."
+read rd
+clear
+if [ "$rd" == "" ]
 then
 	echo " >> Timer >> Error-01: Pleese input time."
 	exit 1
 fi
-echo " >> Timer >> You set a $1 minute alarm."
+echo " >> Timer >> You set a $rd minute alarm."
 sleep 1
 clear
-for ((i=$1-1;i>=0;i--))
+for ((i = $rd-1;i>=0;i--))
 do
         if [ "$i" = "0" ]
         then

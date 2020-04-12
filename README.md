@@ -10,11 +10,9 @@ Input this in your Bash:
 # 1. Download
 git clone https://github.com/langonginc/Timer.git
 
-# 2. Install
-cd Timer/
+# 2. Setting
+alias timer='bash ~/Timer/timer.sh'
 
 # 3. Run
-bash timer.sh <TIME>
+timer
 ```
-
-```<TIME>``` Pleese write down a number.
