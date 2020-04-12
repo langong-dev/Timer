@@ -4,15 +4,8 @@ a Bash Alert Timer.
 
 # How To Use It
 
-Input this in your Bash:
+1. Download ```install.sh``` and run it ```bash install.sh``` .\
+2. Check this folder ```Timer/``` in ```~/```. If you have this, let's go next. If you haven't got this, Pleese read the part of ```Install-Error```
+3. Run ```timer``` .
 
-```bash
-# 1. Download
-git clone https://github.com/langonginc/Timer.git
-
-# 2. Setting
-alias timer='bash ~/Timer/timer.sh'
-
-# 3. Run
-timer
-```
+I

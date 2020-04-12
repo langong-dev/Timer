@@ -5,7 +5,5 @@ cd ~/
 git clone 'https://github.com/langonginc/Timer.git'
 
 # 2. Setting
-alias timer='bash ~/Timer/timer.sh'
-
-# 3. Run
-timer
+al="alias timer='bash ~/Timer/timer.sh'"
+echo $al >> ~/.bashrc
