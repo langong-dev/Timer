@@ -22,6 +22,3 @@ If you have it, you can rename it.
 
 You haven't a foldef named ```Timer``` , please check your Internet.
 
-# Run-Error
-
-## 1. Bash cannot found 
