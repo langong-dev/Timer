@@ -1,26 +1,34 @@
 #!/bin/bash
+
 clear
-echo " >> Timer >> Pleese input time."
-read rd
+
+
+PET=$(whiptail --title "Input time (seconds), must be numbers." --inputbox "Input a number." 10 60  3>&1 1>&2 2>&3)
+exitstatus=$?
+if [ $exitstatus = 0 ]; then
+
+rd=$PET
 clear
 if [ "$rd" == "" ]
 then
-	echo " >> Timer >> Error-01: Pleese input time."
+	echo -e "\e[36m >> Timer >> \e[31mError-01: Pleese input time.\e[31m"
 	exit 1
 fi
-echo " >> Timer >> You set a $rd minute alarm."
-sleep 1
 clear
-for ((i = $rd-1;i>=0;i--))
-do
-        if [ "$i" = "0" ]
-        then
-                echo " >> Timer >> Time is over. "
-                exit
-        fi
-        ((Minute=$i/60))
-        ((Second=$i%60))
-        echo " >> Timer >> Your alarm has $Minute:$Second minutes left."
+if [ "$rd" = "0" ]
+then
+	whiptail --title "Time is over." --msgbox "The Time is over!" 10 60
+	exit 0
+fi
+
+add=$((100/$rd))
+{
+    for ((i = 0 ; i <= 100 ; i+=$add)); do
         sleep 1
-		  clear
-done
+        echo $i
+    done
+} | whiptail --gauge "Timer" 6 60 0
+	whiptail --title "Time is over." --msgbox "The Time is over!" 10 60
+else
+    echo "You chose Cancel."
+fi
