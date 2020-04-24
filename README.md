@@ -7,6 +7,7 @@ a Bash Alert Timer.
 Please install `langong-dev/LanFilePackage` .
 
 ```bash
+cd ~/LanFilePackage
 ./LanGong install github langong-dev/Timer
 ```
 
